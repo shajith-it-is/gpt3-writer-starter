@@ -115,7 +115,7 @@ const Home = () => {
       </div>
       <div className="badge-container-2 grow">
         <a
-          // href="https://portfolio.shajith.co.in"
+          href="https://portfolio.shajith.co.in"
           target="_blank"
           rel="noreferrer"
         >
