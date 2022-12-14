@@ -6,10 +6,12 @@ import Script from 'next/script'
 
 import { useState } from 'react';
 
+const GTAG=process.env.GTAG;
+
 const Home = () => {
   const [userInput, setUserInput] = useState('');
   const [apiOutput, setApiOutput] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false)
+  const [isGenerating, setIsGenerating] = useState(false);
 
   const callGenerateEndpoint = async () => {
     setIsGenerating(true);
@@ -38,16 +40,17 @@ const Home = () => {
   };
   return (
     <div className="root">
-      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`} />
-      <Script strategy="lazyOnload">
-          {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', ${process.env.GTAG}, {
-              page_path: window.location.pathname,
-              });
-          `}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.GTAG});
+        `}
       </Script>
       <Head>
         <title>GPT-3 Writer | buildspace | How to Respond?</title>
