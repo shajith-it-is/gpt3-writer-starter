@@ -121,7 +121,7 @@ const Home = () => {
         >
           <div className="badge">
             <Image src={shajithLogo} alt="Shajith Avatar" />
-            <p>Made with 💘 by Shajith</p>
+            <p>Made with 💖 by Shajith</p>
           </div>
         </a>
       </div>
