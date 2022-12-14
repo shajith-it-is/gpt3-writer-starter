@@ -38,23 +38,19 @@ const Home = () => {
   };
   return (
     <div className="root">
+      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.gTag}`} />
+      <Script strategy="lazyOnload">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.gTag}', {
+              page_path: window.location.pathname,
+              });
+          `}
+      </Script>
       <Head>
         <title>GPT-3 Writer | buildspace | How to Respond?</title>
-        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.gTag}`}/>
-        <Script
-        id='google-analytics'
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', ${process.env.gTag}, {
-          page_path: window.location.pathname,
-          });
-          `,
-      }}
-      />
       </Head>
       <div className="container">
         <div className="header">
