@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
+import shajithLogo from '../assets/shajith-logo.png';
 
 import { useState } from 'react';
 
@@ -92,6 +93,18 @@ const Home = () => {
           <div className="badge">
             <Image src={buildspaceLogo} alt="buildspace logo" />
             <p>build with buildspace</p>
+          </div>
+        </a>
+      </div>
+      <div className="badge-container-2 grow">
+        <a
+          // href="https://portfolio.shajith.co.in"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="badge">
+            <Image src={shajithLogo} alt="Shajith Avatar" />
+            <p>Made with 💘 by Shajith</p>
           </div>
         </a>
       </div>
