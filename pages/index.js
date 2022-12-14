@@ -38,13 +38,13 @@ const Home = () => {
   };
   return (
     <div className="root">
-      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.gTag}`} />
+      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`} />
       <Script strategy="lazyOnload">
           {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.gTag}', {
+              gtag('config', ${process.env.GTAG}, {
               page_path: window.location.pathname,
               });
           `}
