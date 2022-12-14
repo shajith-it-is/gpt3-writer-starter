@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 import shajithLogo from '../assets/shajith-logo.png';
+import Script from 'next/script'
 
 import { useState } from 'react';
 
