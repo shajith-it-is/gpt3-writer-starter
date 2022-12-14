@@ -47,6 +47,7 @@ const Home = () => {
           </div>
           <div className="header-subtitle">
             <h2>Are you confused on what to respond back in text or calls? Here is a tool that can help</h2>
+            <h5 style={{textAlign: 'center'}}>You can also use it to anticipate the next likely reply.</h5>
           </div>
         </div>
       </div>
