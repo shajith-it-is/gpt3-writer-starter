@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <div className="root">
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GTAG}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-YZ9JNK1419`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -49,7 +49,7 @@ const Home = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', "${process.env.GTAG}");
+          gtag('config', 'G-YZ9JNK1419');
         `}
       </Script>
       <Head>
