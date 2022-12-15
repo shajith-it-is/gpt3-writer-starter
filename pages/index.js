@@ -49,7 +49,7 @@ const Home = () => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', ${process.env.GTAG});
+          gtag('config', "${process.env.GTAG}");
         `}
       </Script>
       <Head>
