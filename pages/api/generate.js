@@ -17,7 +17,7 @@ const generateAction = async (req, res) => {
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
     //////////////////////////////////////////////////////check below line and add basepromtprefix
-    prompt: `${basePromptPrefix}${req.body.userInput}\n`,
+    prompt: `${req.body.userInput}\n`,
     temperature: 0.7,
     max_tokens: 250,
   });
