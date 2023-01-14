@@ -60,10 +60,10 @@ const Home = () => {
           <div className="header-title">
             <h1>How to respond?</h1>
           </div>
-          {/* <div className="header-subtitle">
+          <div className="header-subtitle">
             <h2>Are you confused on what to respond back in text or calls? Here is a tool that can help</h2>
             <h5 style={{textAlign: 'center'}}>You can also use it to anticipate the next likely reply.</h5>
-          </div> */}
+          </div>
         </div>
       </div>
         <div className="prompt-container">
@@ -100,7 +100,7 @@ const Home = () => {
             </div>
           )}
         </div>
-      {/* <div className="badge-container grow">
+      <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
           target="_blank"
@@ -111,8 +111,8 @@ const Home = () => {
             <p>build with buildspace</p>
           </div>
         </a>
-      </div> */}
-      {/* <div className="badge-container-2 grow">
+      </div>
+      <div className="badge-container-2 grow">
         <a
           href="https://portfolio.shajith.co.in"
           target="_blank"
@@ -123,7 +123,7 @@ const Home = () => {
             <p>Made with 💖 by Shajith</p>
           </div>
         </a>
-      </div> */}
+      </div>
     </div>
   );
 };
