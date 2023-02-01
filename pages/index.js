@@ -53,7 +53,7 @@ const Home = () => {
         `}
       </Script>
       <Head>
-        <title>GPT-3 Writer | buildspace | How to Respond?</title>
+        <title>Buildspace | How to Respond?</title>
       </Head>
       <div className="container">
         <div className="header">
